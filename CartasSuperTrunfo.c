@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 int main() {
-    // Declaração das variáveis da Carta 1
+    // Variáveis da Carta 1
     char estado1;
-    char codigo1[4];            // Exemplo: "A01" + '\0' → 4 posições
-    char nomeCidade1[50];       // Tamanho suficiente para o nome da cidade
+    char codigo1[4];            // Ex: "A01" + '\0' = 4 posições
+    char nomeCidade1[50];
     int populacao1;
     float area1;
     float pib1;
     int pontosTuristicos1;
 
-    // Declaração das variáveis da Carta 2
+    // Variáveis da Carta 2
     char estado2;
     char codigo2[4];
     char nomeCidade2[50];
@@ -20,7 +20,7 @@ int main() {
     float pib2;
     int pontosTuristicos2;
 
-    // Entrada de dados para a Carta 1
+    // Cadastro da Carta 1
     printf("Cadastro da Carta 1:\n");
 
     printf("Digite o Estado (letra de A a H): ");
@@ -30,7 +30,7 @@ int main() {
     scanf("%3s", codigo1);
 
     printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade1); // Lê a string com espaços
+    scanf(" %[^\n]", nomeCidade1);
 
     printf("Digite a População: ");
     scanf("%d", &populacao1);
@@ -44,7 +44,10 @@ int main() {
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
-    // Entrada de dados para a Carta 2
+    // Limpeza de buffer para evitar problemas na próxima leitura
+    getchar();
+
+    // Cadastro da Carta 2
     printf("\nCadastro da Carta 2:\n");
 
     printf("Digite o Estado (letra de A a H): ");
@@ -90,4 +93,3 @@ int main() {
 
     return 0;
 }
-
